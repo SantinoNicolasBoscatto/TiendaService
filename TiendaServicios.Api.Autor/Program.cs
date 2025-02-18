@@ -28,14 +28,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-<<<<<<< HEAD
-
-
-
-=======
-app.UseHttpsRedirection();
->>>>>>> b810442fb2f206c58926f38a8bd5d6d25f06256d
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
