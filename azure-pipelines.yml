@@ -14,14 +14,14 @@ steps:
     version: '8.x'
 
 - script: |
-    dotnet build --configuration $buildConfiguration
+    dotnet build --configuration $(buildConfiguration)
   displayName: 'Build solution'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
     projects: '**/*Tests.csproj'
-    arguments: '--configuration $buildConfiguration'
+    arguments: '--configuration $(buildConfiguration)'
     testRunTitle: 'DotNetCoreTests'
 
 - task: PublishBuildArtifacts@1
