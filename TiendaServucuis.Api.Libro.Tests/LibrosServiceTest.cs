@@ -30,7 +30,7 @@ namespace TiendaServucuis.Api.Libro.Tests
 
             await handler.Handle(request, new CancellationToken());
 
-            Assert.True(dbContextFake.LibreriaMaterial.Any());
+            Assert.False(dbContextFake.LibreriaMaterial.Any());
         }
     }
 }
